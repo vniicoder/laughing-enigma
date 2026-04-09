@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Good Morning My Love | A Romantic Message</title>
+    <meta name="language" content="en-US">
+    <meta name="title" content="Good Morning My Love | A Romantic Message">
+    <meta name="describe" content="A special morning message for someone special...">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/js.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body id="bgc">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    
+    <!-- Music Player -->
+    <div class="music-player">
+        <audio id="media" controls>
+            <source src="your-song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <label for="media" class="music-label">🎵 Play Our Song</label>
+    </div>
+
+    <div class="mb-box">
+        <div class="bb">
+            <h2>Good Morning, My Love ☀️</h2>
+            <div class="bb_text">
+                <div id="code">
+                    Every morning I wake up thinking of you,
+                    And my heart starts beating just a little faster.
+                    The sunrise reminds me of your beauty—
+                    Golden, warm, and absolutely breathtaking.
+
+                    I love the way you smile when you first open your eyes,
+                    The gentle way you stretch and yawn,
+                    The soft touch of your hand in mine.
+
+                    You are my first thought in the morning,
+                    And my last prayer before sleep.
+                    You are my favorite hello and my hardest goodbye.
+
+                    Thank you for being my sunshine,
+                    For brightening even my darkest days,
+                    For loving me the way you do.
+
+                    I can't wait to spend every morning with you,
+                    Creating beautiful memories together,
+                    Growing old side by side,
+                    With your hand always in mine.
+
+                    You make every single day worth living.
+                    I love you more than words could ever say.
+                </div>
+            </div>
+            <p class="bb_myname">
+                Forever Yours ❤️ <br>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        Element.prototype.typewriter = function () {
+            var element = this,
+                content = element.innerHTML,
+                index = 0;
+            element.innerHTML = "";
+            var timer = setInterval(function () {
+                var currentChar = content.substr(index, 1);
+                if (currentChar === "<") {
+                    index = content.indexOf(">", index) + 1;
+                } else {
+                    index++;
+                }
+                element.innerHTML = content.substring(0, index) + (index & 1 ? "_" : "");
+                if (index >= content.length) {
+                    clearInterval(timer);
+                }
+            }, 150);
+            return this;
+        };
+        document.getElementById("code").typewriter();
+    </script>
+
+</body>
+</html>
